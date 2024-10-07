@@ -15,7 +15,7 @@ import {PeopleController} from "../controller/PeopleController";
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Person'
+ *                 $ref: '#/components/schemas/People'
  */
 router.get(
     "/database/people",
@@ -26,7 +26,7 @@ router.get(
 /**
  * @swagger
  * /database/people/save:
- *   get:
+ *   post:
  *     summary: Guardar un personaje
  *     responses:
  *       200:
@@ -36,7 +36,7 @@ router.get(
  *             schema:
  *               type: array
  *               items:
- *                 $ref: '#/components/schemas/Person'
+ *                 $ref: '#/components/schemas/People'
  */
 router.post(
     "/database/people/save",

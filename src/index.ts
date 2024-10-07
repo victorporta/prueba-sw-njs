@@ -1,7 +1,6 @@
 import { Server } from "./server/server";
-import { v4 as uuidv4 } from 'uuid';
 import appRouter from "./routes/index";
-import { setupSwagger } from '../swagger';
+import { setupSwagger } from '../swagger/swagger';
 
 const session = require("express-session");
 const serverless = require("serverless-http");

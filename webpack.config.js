@@ -46,6 +46,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
               { from: 'prisma/schema.prisma', to: 'src/schema.prisma' },
+              { from: 'swagger/', to: 'src/swagger/' },
+
               { from: 'node_modules/.prisma/client/libquery_engine-rhel-openssl-1.0.x.so.node', to: 'src/libquery_engine-rhel-openssl-1.0.x.so.node' },
               { from: 'node_modules/.prisma/client/libquery_engine-darwin-arm64.dylib.node', to: 'src/libquery_engine-darwin-arm64.dylib.node' },
               { from: 'node_modules/.prisma/client/query_engine-windows.dll.node', to: 'src/query_engine-windows.dll.node' }

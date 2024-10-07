@@ -4,7 +4,7 @@
   "description": "evaluacion",
   "main": "webpack.config.js",
   "scripts": {
-    "deploy": "serverless deploy --aws-profile avr --stage api",
+    "deploy": "serverless deploy --aws-profile softek --stage api",
     "offline": "node --inspect ./node_modules/serverless/scripts/serverless.js offline start --reloadHandler",
     "start": "npm run offline",
     "test": "jest",
