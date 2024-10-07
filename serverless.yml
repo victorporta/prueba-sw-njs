@@ -1,0 +1,39 @@
+service: avr
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline 
+
+package:
+  excludeDevDependencies: false
+patterns:
+    - '!node_modules/aws-sdk/**'
+    - '!node_modules/.bin/**'
+    - '!**/*.ts'
+    - '!**/*.log'
+    - 'prisma/**'
+    - '!prisma/migrations/**'
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  serverless-offline:
+    httpPort: 4000
+  prisma:
+    schema: prisma/schema.prisma 
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: api
+  region: us-east-1
+  timeout: 60
+
+functions:
+  app:
+    handler: src/index.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
