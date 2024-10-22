@@ -12,8 +12,8 @@ Este proyecto es una implementación serverless utilizando Node.js y TypeScript.
 
 1. Clona el repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
+   git clone https://github.com/victorporta/prueba-sw-njs
+   cd prueba-sw-njs
    ```
 2. Instala las dependencias del proyecto:
 ```
@@ -21,14 +21,14 @@ Este proyecto es una implementación serverless utilizando Node.js y TypeScript.
 ```
 3. Crea una base de datos MySQL llamada softek:
 ```
-  CREATE DATABASE softek;
+  CREATE DATABASE prueba;
 ```
 4. Ejecuta el archivo query.sql para crear la tabla People en la base de datos, que se utilizará para almacenar los registros:
 
 ## Configuración de Prisma
 1. Asegúrate de configurar las variables de entorno para la conexión a tu base de datos MySQL en el archivo .env:
    ```
-   DATABASE_URL="mysql://user:password@localhost:3306/softek"
+   DATABASE_URL="mysql://user:password@localhost:3306/prueba"
    ```
 2. Genera los modelos de Prisma:
    ```
