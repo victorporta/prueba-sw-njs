@@ -19,7 +19,7 @@ Este proyecto es una implementación serverless utilizando Node.js y TypeScript.
 ```
    npm install
 ```
-3. Crea una base de datos MySQL llamada softek:
+3. Crea una base de datos MySQL llamada prueba:
 ```
   CREATE DATABASE prueba;
 ```
